@@ -15,9 +15,13 @@ public class Transaction {
     private double amount;
     private BigDecimal availableBalance;
 
-    public Transaction() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
+    public Transaction() {
+
+    }
 
     public Transaction(Date date, String type, double amount, BigDecimal availableBalance, Account account) {
         this.date = date;
@@ -26,10 +30,6 @@ public class Transaction {
         this.availableBalance = availableBalance;
         this.account = account;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "account_id")
-    private Account account;
 
     public Long getId() {
         return id;
