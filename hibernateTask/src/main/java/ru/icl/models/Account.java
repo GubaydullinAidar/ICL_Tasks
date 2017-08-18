@@ -47,8 +47,6 @@ public class Account {
     public void setTransactionList(List<Transaction> transactionList) {
         this.transactionList = transactionList;
     }
-
-
 }
 
 

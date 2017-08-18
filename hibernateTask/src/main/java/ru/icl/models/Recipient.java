@@ -17,7 +17,6 @@ public class Recipient {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    @JsonIgnore
     private User user;
 
     public Long getId() {

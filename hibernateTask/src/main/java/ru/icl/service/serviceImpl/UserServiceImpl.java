@@ -23,11 +23,11 @@ public class UserServiceImpl implements UserService {
     private AccountService accountService;
 	
 	public void saveUser(User user) {
-        userDao.save(user);
+       // userDao.save(user);
     }
 
     public User findByUsername(String username) {
-        return userDao.findByUsername(username);
+        return null;//userDao.findByUsername(username);
     }
 
 }
