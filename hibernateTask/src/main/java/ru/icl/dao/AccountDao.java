@@ -4,7 +4,7 @@ import ru.icl.models.Account;
 
 public interface AccountDao {
 
-    Account findByAccountNumber(int accountNumber);
+    Account getAccountById(Long id);
 
-    void save(Account account);
+    void updateAccount(Account account);
 }

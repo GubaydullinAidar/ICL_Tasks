@@ -31,9 +31,9 @@ public class AccountServiceImpl implements AccountService {
         account.setAccountBalance(new BigDecimal(0.0));
         account.setAccountNumber(accountGen());
 
-        accountDao.save(account);
+        //accountDao.save(account);
 
-        return accountDao.findByAccountNumber(account.getAccountNumber());
+        return null;// accountDao.findByAccountNumber(account.getAccountNumber());
     }
 
     public void deposit(String accountType, double amount, Principal principal) {
@@ -43,7 +43,7 @@ public class AccountServiceImpl implements AccountService {
         if (accountType.equalsIgnoreCase("Основной")) {
             Account account = user.getAccount();
             account.setAccountBalance(account.getAccountBalance().add(new BigDecimal(amount)));
-            accountDao.save(account);
+            //accountDao.save(account);
 
             Date date = new Date();
 
@@ -60,7 +60,7 @@ public class AccountServiceImpl implements AccountService {
         if (accountType.equalsIgnoreCase("Основной")) {
             Account account = user.getAccount();
             account.setAccountBalance(account.getAccountBalance().subtract(new BigDecimal(amount)));
-            accountDao.save(account);
+            //accountDao.save(account);
 
             Date date = new Date();
 
