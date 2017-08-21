@@ -11,20 +11,18 @@ import ru.itpark.models.User;
 import ru.itpark.service.AccountService;
 import ru.itpark.service.UserService;
 
-import java.util.Set;
-
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
-	
-	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
-	
-	@Autowired
-	private UserDao userDao;
+
+    private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+
+    @Autowired
+    private UserDao userDao;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-    
+
     @Autowired
     private AccountService accountService;
 
@@ -35,8 +33,8 @@ public class UserServiceImpl implements UserService {
     public User findByEmail(String email) {
         return userDao.findByEmail(email);
     }
-    
-    
+
+
     public User createUser(User user) {
         User localUser = userDao.findByUsername(user.getUsername());
 
@@ -53,8 +51,8 @@ public class UserServiceImpl implements UserService {
 
         return localUser;
     }
-    
-    public boolean checkUserExists(String username, String email){
+
+    public boolean checkUserExists(String username, String email) {
         return checkUsernameExists(username) || checkEmailExists(username);
     }
 
@@ -62,13 +60,13 @@ public class UserServiceImpl implements UserService {
         return null != findByUsername(username);
 
     }
-    
+
     public boolean checkEmailExists(String email) {
         return null != findByEmail(email);
 
     }
 
-    public User saveUser (User user) {
+    public User saveUser(User user) {
         return userDao.save(user);
     }
 }

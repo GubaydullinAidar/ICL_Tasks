@@ -2,7 +2,6 @@ package ru.itpark.dao;
 
 import ru.itpark.models.Recipient;
 
-import java.security.Principal;
 import java.util.List;
 
 public interface RecipientDao {

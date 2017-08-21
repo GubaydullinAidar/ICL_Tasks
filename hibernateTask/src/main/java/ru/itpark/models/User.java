@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "`user`")
-public class User implements UserDetails{
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,7 +26,7 @@ public class User implements UserDetails{
     private String email;
     private String phone;
 
-    private boolean enabled=true;
+    private boolean enabled = true;
 
     @OneToOne
     private PrimaryAccount primaryAccount;

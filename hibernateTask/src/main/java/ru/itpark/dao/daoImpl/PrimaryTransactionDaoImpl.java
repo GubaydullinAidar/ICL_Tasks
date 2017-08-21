@@ -3,14 +3,13 @@ package ru.itpark.dao.daoImpl;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.itpark.dao.PrimaryTransactionDao;
 import ru.itpark.models.PrimaryAccount;
 import ru.itpark.models.PrimaryTransaction;
-import ru.itpark.models.Recipient;
-import ru.itpark.models.User;
 
 import java.util.List;
 
@@ -39,4 +38,15 @@ public class PrimaryTransactionDaoImpl implements PrimaryTransactionDao {
         session.getTransaction().commit();
         return primaryTransactionList;
     }
+
+    @Override
+    public List<PrimaryTransaction> findAllOrderByAmount() {
+        Session session = sessionFactory.openSession();
+        Criteria criteria = session.createCriteria(PrimaryTransaction.class);
+        List<PrimaryTransaction> primaryTransactionList = criteria.addOrder(Order.asc("amount")).list();
+        session.close();
+        return primaryTransactionList;
+    }
+
+
 }

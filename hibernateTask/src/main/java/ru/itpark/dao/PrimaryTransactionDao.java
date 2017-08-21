@@ -8,4 +8,6 @@ public interface PrimaryTransactionDao {
     void save(PrimaryTransaction primaryTransaction);
 
     List<PrimaryTransaction> findAll(Integer accountNumber);
+
+    List<PrimaryTransaction> findAllOrderByAmount();
 }

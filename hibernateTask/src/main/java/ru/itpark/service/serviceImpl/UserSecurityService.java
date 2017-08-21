@@ -13,7 +13,6 @@ import ru.itpark.models.User;
 @Service
 public class UserSecurityService implements UserDetailsService {
 
-    /** The application logger */
     private static final Logger LOG = LoggerFactory.getLogger(UserSecurityService.class);
 
     @Autowired

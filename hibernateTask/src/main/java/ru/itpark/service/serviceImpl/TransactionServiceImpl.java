@@ -3,8 +3,13 @@ package ru.itpark.service.serviceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itpark.dao.*;
-import ru.itpark.models.*;
+import ru.itpark.dao.PrimaryAccountDao;
+import ru.itpark.dao.PrimaryTransactionDao;
+import ru.itpark.dao.RecipientDao;
+import ru.itpark.models.PrimaryAccount;
+import ru.itpark.models.PrimaryTransaction;
+import ru.itpark.models.Recipient;
+import ru.itpark.models.User;
 import ru.itpark.service.TransactionService;
 import ru.itpark.service.UserService;
 

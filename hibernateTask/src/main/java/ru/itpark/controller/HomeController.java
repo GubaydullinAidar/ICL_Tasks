@@ -11,8 +11,6 @@ import ru.itpark.models.User;
 import ru.itpark.service.UserService;
 
 import java.security.Principal;
-import java.util.HashSet;
-import java.util.Set;
 
 @Controller
 public class HomeController {

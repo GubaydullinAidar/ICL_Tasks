@@ -2,8 +2,6 @@ package ru.itpark.service;
 
 import ru.itpark.models.User;
 
-import java.util.Set;
-
 public interface UserService {
 
     User findByUsername(String username);
@@ -18,5 +16,5 @@ public interface UserService {
 
     User createUser(User user);
 
-    User saveUser (User user);
+    User saveUser(User user);
 }
