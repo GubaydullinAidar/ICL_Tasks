@@ -11,6 +11,8 @@ public class Recipient {
     private String name;
     private String email;
     private String phone;
+
+    @Column(unique = true)
     private Integer recipientAccountNumber;
     private String description;
 

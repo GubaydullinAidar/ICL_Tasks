@@ -19,7 +19,7 @@ import java.util.Date;
 @Transactional
 public class AccountServiceImpl implements AccountService {
 
-    private static int nextAccountNumber = 11223145;
+    //private static int nextAccountNumber = 11223145;
 
     @Autowired
     private PrimaryAccountDao primaryAccountDao;
@@ -67,6 +67,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     private int accountGen() {
+        int nextAccountNumber = primaryAccountDao.getMaxAccountNumber();
         return ++nextAccountNumber;
     }
 }

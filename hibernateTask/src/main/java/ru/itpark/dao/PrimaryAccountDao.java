@@ -4,7 +4,9 @@ import ru.itpark.models.PrimaryAccount;
 
 public interface PrimaryAccountDao {
 
-    PrimaryAccount findByAccountNumber(int accountNumber);
+    PrimaryAccount findByAccountNumber(Integer accountNumber);
 
     PrimaryAccount save(PrimaryAccount primaryAccount);
+
+    Integer getMaxAccountNumber();
 }
