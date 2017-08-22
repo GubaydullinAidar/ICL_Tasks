@@ -11,9 +11,7 @@ public interface TransactionService {
 
     List<PrimaryTransaction> findPrimaryTransactionList(String username);
 
-    void savePrimaryDepositTransaction(PrimaryTransaction primaryTransaction);
-
-    void savePrimaryWithdrawTransaction(PrimaryTransaction primaryTransaction);
+    void savePrimaryTransaction(PrimaryTransaction primaryTransaction);
 
     List<Recipient> findRecipientList(Principal principal);
 

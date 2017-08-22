@@ -39,11 +39,7 @@ public class TransactionServiceImpl implements TransactionService {
         return primaryTransactionDao.findAll(user.getPrimaryAccount().getAccountNumber());
     }
 
-    public void savePrimaryDepositTransaction(PrimaryTransaction primaryTransaction) {
-        primaryTransactionDao.save(primaryTransaction);
-    }
-
-    public void savePrimaryWithdrawTransaction(PrimaryTransaction primaryTransaction) {
+    public void savePrimaryTransaction(PrimaryTransaction primaryTransaction) {
         primaryTransactionDao.save(primaryTransaction);
     }
 

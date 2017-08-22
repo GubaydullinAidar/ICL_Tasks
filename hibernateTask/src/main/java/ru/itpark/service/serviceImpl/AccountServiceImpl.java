@@ -49,7 +49,7 @@ public class AccountServiceImpl implements AccountService {
         Date date = new Date();
 
         PrimaryTransaction primaryTransaction = new PrimaryTransaction(date, "Пополнение основного счета", "Счет", "Завершен", amount, primaryAccount.getAccountBalance(), primaryAccount);
-        transactionService.savePrimaryDepositTransaction(primaryTransaction);
+        transactionService.savePrimaryTransaction(primaryTransaction);
     }
 
     public void withdraw(double amount, Principal principal) {
@@ -63,7 +63,7 @@ public class AccountServiceImpl implements AccountService {
         Date date = new Date();
 
         PrimaryTransaction primaryTransaction = new PrimaryTransaction(date, "Списание с основного счета", "Счет", "Завершен", amount, primaryAccount.getAccountBalance(), primaryAccount);
-        transactionService.savePrimaryWithdrawTransaction(primaryTransaction);
+        transactionService.savePrimaryTransaction(primaryTransaction);
     }
 
     private int accountGen() {
