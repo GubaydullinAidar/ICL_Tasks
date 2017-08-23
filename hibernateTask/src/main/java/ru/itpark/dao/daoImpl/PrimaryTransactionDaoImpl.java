@@ -47,6 +47,4 @@ public class PrimaryTransactionDaoImpl implements PrimaryTransactionDao {
         session.close();
         return primaryTransactionList;
     }
-
-
 }

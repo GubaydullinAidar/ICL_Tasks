@@ -41,7 +41,7 @@ public class PrimaryAccountDaoImpl implements PrimaryAccountDao {
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("select max(accountNumber) from PrimaryAccount");
         Integer max =(Integer) query.list().get(0);
-
+        session.close();
         return max;
     }
 }

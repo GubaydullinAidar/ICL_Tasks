@@ -30,6 +30,7 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private TransactionService transactionService;
 
+    //создаем счет
     public PrimaryAccount createPrimaryAccount() {
         PrimaryAccount primaryAccount = new PrimaryAccount();
         primaryAccount.setAccountBalance(new BigDecimal(0.0));
@@ -38,6 +39,7 @@ public class AccountServiceImpl implements AccountService {
         return primaryAccountDao.save(primaryAccount);
     }
 
+    //пополнение счета
     public void deposit(double amount, Principal principal) {
 
         User user = userService.findByUsername(principal.getName());
@@ -52,6 +54,7 @@ public class AccountServiceImpl implements AccountService {
         transactionService.savePrimaryTransaction(primaryTransaction);
     }
 
+    //списание со счета
     public void withdraw(double amount, Principal principal) {
 
         User user = userService.findByUsername(principal.getName());
@@ -66,6 +69,7 @@ public class AccountServiceImpl implements AccountService {
         transactionService.savePrimaryTransaction(primaryTransaction);
     }
 
+    //генерация номера счета
     private int accountGen() {
         int nextAccountNumber = primaryAccountDao.getMaxAccountNumber();
         return ++nextAccountNumber;
