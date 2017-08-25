@@ -7,13 +7,16 @@
              version="2.0">
 
     <portlet>
-        <portlet-name>HelloPortlet</portlet-name>
-        <portlet-class>ru.iclTask.portlet.PortalTaskHello</portlet-class>
+        <portlet-name>hello</portlet-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
         </supports>
-        <resource-bundle>messages.PortalTaskHello</resource-bundle>
+        <resource-bundle>/WEB-INF/i18n/resources/ApplicationResources</resource-bundle>
+        <portlet-info>
+            <title>Hello Portlet</title>
+        </portlet-info>
     </portlet>
-    
+
 </portlet-app>
