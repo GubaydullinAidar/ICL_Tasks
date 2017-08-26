@@ -10,12 +10,12 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring.version>4.3.9.RELEASE</spring.version>
-        <portlet-api.version>3.0.0</portlet-api.version>
+        <spring.version>3.1.2.RELEASE</spring.version>
+        <portlet-api.version>2.0</portlet-api.version>
         <servlet-api.version>2.5</servlet-api.version>
         <jstl.version>1.2</jstl.version>
         <logback.version>1.0.6</logback.version>
-        <pluto.taglib.version>3.0.0</pluto.taglib.version>
+        <pluto.taglib.version>2.1.0-M2</pluto.taglib.version>
     </properties>
 
     <dependencies>
@@ -53,18 +53,21 @@
             <groupId>javax.portlet</groupId>
             <artifactId>portlet-api</artifactId>
             <version>${portlet-api.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>${servlet-api.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -86,6 +89,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
@@ -96,16 +100,27 @@
                 <groupId>net.jlehtinen.portlet</groupId>
                 <artifactId>portlet-prototyping-maven-plugin</artifactId>
                 <configuration>
-                    <!--<portletNames>PortalTaskHello</portletNames>-->
+                    <portletNames></portletNames>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>jlehtinen.net</id>
+            <url>http://repo.jlehtinen.net/maven2/</url>
+        </repository>
+    </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
-            <url>http://repo.maven.org/maven2/</url>
+            <url>http://repo1.maven.org/maven2/</url>
         </pluginRepository>
         <pluginRepository>
             <id>jlehtinen.net</id>
