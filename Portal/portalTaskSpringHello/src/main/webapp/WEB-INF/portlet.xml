@@ -13,7 +13,7 @@
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
         </supports>
-        <resource-bundle>/WEB-INF/i18n/resources/ApplicationResources</resource-bundle>
+        <resource-bundle>ApplicationResources</resource-bundle>
         <portlet-info>
             <title>Hello Portlet</title>
         </portlet-info>
