@@ -27,7 +27,7 @@ public class HelloController {
     }
 
     @ActionMapping
-    public void action(ActionRequest request, ActionResponse response,
+    public void actionFirst(ActionRequest request, ActionResponse response,
                        @RequestParam(required = false, value = "name") String name, Model model) {
         logger.info("invoke action with name = {}", name);
         model.addAttribute("name", name);
