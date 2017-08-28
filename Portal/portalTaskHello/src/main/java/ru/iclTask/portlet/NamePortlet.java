@@ -10,7 +10,7 @@ public class NamePortlet extends GenericPortlet {
 
     @RenderMode(name = "VIEW")
     public void view(RenderRequest request, RenderResponse response) throws IOException, PortletException {
-        getPortletContext().getRequestDispatcher("/WEB-INF/jsp/viewName.jsp").include(request, response);
+        getPortletContext().getRequestDispatcher(JSP_FILE).include(request, response);
     }
 
     @ProcessAction(name = "nameAction")

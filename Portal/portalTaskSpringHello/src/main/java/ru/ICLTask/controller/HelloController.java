@@ -18,13 +18,7 @@ import javax.portlet.RenderResponse;
 @RequestMapping("VIEW")
 public class HelloController {
 
-    @RequestMapping
-    public String showIndex() {
-        return "index";
-    }
-
-
-    /*static private Logger logger = LoggerFactory.getLogger(HelloController.class);
+    static private Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @RenderMapping
     public String render(RenderRequest request, RenderResponse response, Model model) {
@@ -40,9 +34,9 @@ public class HelloController {
         response.setRenderParameter("page", "hello");
     }
 
-    @RenderMapping
+    @RenderMapping(params = "page=hello")
     public String renderHello(RenderRequest request, RenderResponse response, Model model) {
         logger.info("invoke renderHello");
         return "hello";
-    }*/
+    }
 }

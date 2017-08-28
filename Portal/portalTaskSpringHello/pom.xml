@@ -15,7 +15,7 @@
         <servlet-api.version>2.5</servlet-api.version>
         <jstl.version>1.2</jstl.version>
         <logback.version>1.0.6</logback.version>
-        <pluto.taglib.version>2.1.0-M2</pluto.taglib.version>
+        <pluto.taglib.version>2.0.3</pluto.taglib.version>
     </properties>
 
     <dependencies>
@@ -89,10 +89,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.2</version>
+                <version>2.5</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
 
@@ -100,17 +100,17 @@
                 <groupId>net.jlehtinen.portlet</groupId>
                 <artifactId>portlet-prototyping-maven-plugin</artifactId>
                 <configuration>
-                    <portletNames></portletNames>
+                    <portletNames>hello</portletNames>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <repositories>
-        <repository>
+        <!--<repository>
             <id>central</id>
             <url>http://repo1.maven.org/maven2/</url>
-        </repository>
+        </repository>-->
         <repository>
             <id>jlehtinen.net</id>
             <url>http://repo.jlehtinen.net/maven2/</url>
@@ -118,10 +118,10 @@
     </repositories>
 
     <pluginRepositories>
-        <pluginRepository>
+        <!--<pluginRepository>
             <id>central</id>
             <url>http://repo1.maven.org/maven2/</url>
-        </pluginRepository>
+        </pluginRepository>-->
         <pluginRepository>
             <id>jlehtinen.net</id>
             <url>http://repo.jlehtinen.net/maven2/</url>
