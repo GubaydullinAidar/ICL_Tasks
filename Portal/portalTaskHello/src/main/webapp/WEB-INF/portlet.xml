@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
@@ -12,8 +10,29 @@
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>help</portlet-mode>
         </supports>
         <resource-bundle>messages.PortalTaskHello</resource-bundle>
+        <supported-processing-event>
+            <qname xmlns:x="http://test.portlet.org">x:name</qname>
+        </supported-processing-event>
     </portlet>
     
+    <portlet>
+        <portlet-name>NamePortlet</portlet-name>
+        <portlet-class>ru.iclTask.portlet.NamePortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <resource-bundle>messages.NamePortlet</resource-bundle>
+        <supported-publishing-event>
+            <qname xmlns:x="http://test.portlet.org">x:name</qname>
+        </supported-publishing-event>
+    </portlet>
+    <event-definition>
+        <qname xmlns:x="http://test.portlet.org">x:name</qname>
+        <value-type>java.lang.String</value-type>
+    </event-definition>
 </portlet-app>

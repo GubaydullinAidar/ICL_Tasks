@@ -10,8 +10,10 @@
     <packaging>war</packaging>
 
     <properties>
-        <portlet-api.version>3.0.0</portlet-api.version>
-        <servlet-api.version>4.0.0</servlet-api.version>
+        <portlet-api.version>2.0</portlet-api.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <jstl.version>1.2</jstl.version>
+        <pluto-version>2.0.3</pluto-version>
     </properties>
 
     <dependencies>
@@ -24,8 +26,22 @@
 
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <artifactId>servlet-api</artifactId>
             <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.portals.pluto</groupId>
+            <artifactId>pluto-taglib</artifactId>
+            <version>${pluto-version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -44,7 +60,7 @@
                 <groupId>net.jlehtinen.portlet</groupId>
                 <artifactId>portlet-prototyping-maven-plugin</artifactId>
                 <configuration>
-                    <!--<portletNames>PortalTaskHello</portletNames>-->
+                    <portletNames>HelloPortlet, NamePortlet</portletNames>
                 </configuration>
             </plugin>
         </plugins>
@@ -61,6 +77,4 @@
             <url>http://repo.jlehtinen.net/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
-
-
 </project>
