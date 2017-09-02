@@ -8,7 +8,14 @@
 
     <portlet>
         <portlet-name>hello</portlet-name>
+
         <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/applicationContext.xml</value>
+        </init-param>
+
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>

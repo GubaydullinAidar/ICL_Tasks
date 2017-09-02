@@ -1,4 +1,4 @@
-package com.ICLTask.controller;
+package ru.itpark.portlets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
