@@ -13,7 +13,7 @@
 
         <init-param>
             <name>contextConfigLocation</name>
-            <value>/WEB-INF/applicationContext.xml</value>
+            <value>/WEB-INF/spring-portlet.xml</value>
         </init-param>
 
         <supports>
