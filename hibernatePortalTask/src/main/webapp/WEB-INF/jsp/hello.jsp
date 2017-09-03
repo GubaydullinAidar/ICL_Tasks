@@ -5,11 +5,19 @@
 
 <fmt:bundle basename="/WEB-INF/i18n/resources/ApplicationResources "/>
 
-<portlet:actionURL var="actionFirst"/>
+<portlet:actionURL var="actionFirstUrl"/>
+<portlet:renderURL var="renderAccountInfUrl">
+    <portlet:param name="render" value="accountInf"/>
+</portlet:renderURL>
+<portlet:renderURL var="renderProfileUrl">
+    <portlet:param name="render" value="profile"/>
+</portlet:renderURL>
 
 <div>
     <fmt:message key="hello.message">
         <fmt:param>${name}</fmt:param>
     </fmt:message>
 </div>
-<a href="<portlet:renderURL></portlet:renderURL>"><fmt:message key="link.back"/></a>
+<a href="${renderProfileUrl}">Информация пользователя</a><br>
+<a href="${renderAccountInfUrl}">Информация о счете</a><br>
+<a href="<portlet:renderURL/>"><fmt:message key="link.back"/></a>
