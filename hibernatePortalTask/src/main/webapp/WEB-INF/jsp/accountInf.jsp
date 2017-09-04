@@ -5,4 +5,6 @@
 
 <%@include file="hello.jsp"%>
 
-<h1> Информация о счете </h1>
+<h1> Информация о счете </h1> <br><br>
+
+<p>Номер счета: ${user.primaryAccount.accountNumber}</p>

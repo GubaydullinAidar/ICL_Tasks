@@ -5,4 +5,9 @@
 
 <%@include file="hello.jsp"%>
 
-<h1> Информация о пользователе. </h1>
+<h1> Информация о пользователе. </h1> <br><br>
+
+<p>Имя: ${user.firstName}</p> <br>
+<p>Фамилия: ${user.lastName}</p> <br>
+<p>Почта: ${user.email}</p> <br>
+<p>Номер телефона: ${user.phone}</p>
