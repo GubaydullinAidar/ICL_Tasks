@@ -1,4 +1,4 @@
-package ru.itpark.portlets;
+package ru.itpark.controller.portlets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,16 +39,18 @@ public class HelloController {
         User user = userService.findByUsername(name);
         //String newName = user.getFirstName() + " " + user.getLastName();
         model.addAttribute("name", user.getFirstName());
-        model.addAttribute("user", user);
         response.setRenderParameter("page", "hello");
-        response.setRenderParameter("render", "accountInf");
-        response.setRenderParameter("render", "profile");
     }
 
     @RenderMapping(params = "page=hello")
     public String renderHello(RenderRequest request, RenderResponse response, Model model) {
         logger.info("invoke renderHello");
         return "hello";
+    }
+
+    @ActionMapping(params = "action=action-one")
+    public void actionAccountInf(ActionRequest request, ActionResponse response, Model model) {
+        response.setRenderParameter("render","accountInf");
     }
 
     @RenderMapping(params = "render=accountInf")

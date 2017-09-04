@@ -5,7 +5,7 @@
 
 <fmt:bundle basename="/WEB-INF/i18n/resources/ApplicationResources"/>
 
-<portlet:actionURL var="actionFirst" />
+<portlet:actionURL var="actionFirst"/>
 
 <div>
     <form action="${actionFirst}" method="post">
