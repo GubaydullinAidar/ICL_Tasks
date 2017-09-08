@@ -1,0 +1,5 @@
+Bundle-SymbolicName: osgi-example
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Activator: ru.ICLTask.demo.DemoActivator
+Import-Package: ru.ICLTask.demo;version="1.0.0.SNAPSHOT",org.osgi.framework
+Export-Package: ru.ICLTask.demo;version="1.0.0.SNAPSHOT"
