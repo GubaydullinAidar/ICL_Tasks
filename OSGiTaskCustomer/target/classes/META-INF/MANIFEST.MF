@@ -1,0 +1,5 @@
+Bundle-SymbolicName: osgi-customer
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Activator: ru.ICLTask.customer.Activator
+Import-Package: ru.ICLTask.service;version="1.0.0.SNAPSHOT",org.osgi.framework,org.osgi.util.tracker
+Export-Package: ru.ICLTask.customer;version="1.0.0.SNAPSHOT"

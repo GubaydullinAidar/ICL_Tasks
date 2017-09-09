@@ -1,0 +1,5 @@
+Bundle-SymbolicName: osgi-service
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Activator: ru.ICLTask.service.Activator
+Import-Package: ru.ICLTask.service;version="1.0.0.SNAPSHOT",org.osgi.framework
+Export-Package: ru.ICLTask.service;version="1.0.0.SNAPSHOT"
