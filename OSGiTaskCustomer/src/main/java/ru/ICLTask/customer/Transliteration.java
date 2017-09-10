@@ -1,7 +1,9 @@
 package ru.ICLTask.customer;
 
-import java.util.List;
+import java.io.UnsupportedEncodingException;
 
 public interface Transliteration {
-    public String translitToLatin(String name);
+    String getLatinName(String name);
+
+    String getNameKyrillic() throws UnsupportedEncodingException;
 }

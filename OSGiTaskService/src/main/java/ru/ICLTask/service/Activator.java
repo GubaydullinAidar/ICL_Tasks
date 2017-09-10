@@ -17,6 +17,7 @@ public class Activator implements BundleActivator {
      * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
      */
     public void start(BundleContext context) throws Exception {
+        System.out.println("Start Bundle Service");
         // create a service
         TranslitService service = new TranslitServiceImpl();
         // set some params
@@ -31,6 +32,8 @@ public class Activator implements BundleActivator {
      * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
      */
     public void stop(BundleContext context) throws Exception {
+        System.out.println("Stop Bundle Service");
+
         registration.unregister();
     }
 }

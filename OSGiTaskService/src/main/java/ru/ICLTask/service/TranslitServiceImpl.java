@@ -12,8 +12,7 @@ public class TranslitServiceImpl implements TranslitService {
     }
 
     public String translitToLatin(String name) {
-        String latin = Transliterator.getInstance("Cyrillic-Latin").transliterate(name);
-        return latin;
+        return Transliterator.getInstance("Cyrillic-Latin").transliterate(name);
     }
 
 }

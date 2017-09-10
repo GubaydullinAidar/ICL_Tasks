@@ -1,12 +1,11 @@
 package ru.ICLTask.customer;
 
-import java.util.List;
-
-import ru.ICLTask.service.TranslitServiceImpl;
-
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
+import ru.ICLTask.service.TranslitServiceImpl;
+
+import java.util.Scanner;
 
 public class Activator implements BundleActivator {
 
@@ -18,20 +17,22 @@ public class Activator implements BundleActivator {
      */
     public void start(BundleContext context) throws Exception {
 
-        String name = null;
+        System.setOut(new java.io.PrintStream(System.out, true, "Cp866"));
+        System.out.println("Start Bundle Customer");
 
         // Create and open tracker
         tracker = new ServiceTracker(context, TranslitServiceImpl.class.getName(), null);
-
         tracker.open();
 
         // Create customer service
-        TransliterationImpl menu = new TransliterationImpl(tracker);
+        TransliterationImpl transliteration = new TransliterationImpl(tracker);
+
+        String name = transliteration.getNameKyrillic();
 
         // Execute the sample
-        String item = menu.translitToLatin(name);
+        String translitName = transliteration.getLatinName(name);
 
-        System.out.println(item);
+        System.out.println(translitName);
     }
 
     /*
@@ -39,6 +40,8 @@ public class Activator implements BundleActivator {
      * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
      */
     public void stop(BundleContext context) throws Exception {
+
+        System.out.println("Stop Bundle Customer");
 
         // Close the ColorizerService ServiceTracker
         tracker.close();
