@@ -6,6 +6,7 @@ import ru.ICLTask.service.TranslitServiceImpl;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 
 public class TransliterationImpl implements Transliteration {
@@ -51,6 +52,9 @@ public class TransliterationImpl implements Transliteration {
         } catch (IOException e) {
             System.out.println(e);
         }
+
+        /*Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();*/
         return input;
     }
 }
